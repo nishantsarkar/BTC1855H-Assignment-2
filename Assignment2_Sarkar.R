@@ -13,11 +13,14 @@ if ((is.numeric(as.numeric(userinput))) &
   # Finding the sum of cubes of the individual digits in userinput
   cubesum <- sum(splitdigits^3)
   
-
+  # Checking if cubesum is equal to userinput. If so, number is an Armstrong number.
+  if ((as.numeric(userinput)) == (cubesum)) { 
+     print(paste(userinput, "is an Armstrong number. How narcissistic of you!"))
+  } else { 
+     print(paste(userinput, "is not an Armstrong number. How humble you are!")) 
+  } # Inner if-else to check if input is an Armstrong number
    
-     
-
 } else {
-  print("Invalid entry! Entry must be a positive three-digit number. Terminating...")
+  print("Invalid input! Entry must be a positive three-digit number. Terminating...")
   quit()
 } # Outer if-else checking for input validity
