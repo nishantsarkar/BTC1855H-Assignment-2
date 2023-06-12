@@ -27,6 +27,6 @@ if ((is.numeric(as.numeric(userinput))) &
   } # Inner if-else to check if input is an Armstrong number
    
 } else {
-  print("Invalid input! Entry must be a positive three-digit number. Terminating...")
+  print(paste(userinput, "is an invalid input! Entry must be a positive three-digit number. Terminating..."))
   quit()
 } # Outer if-else checking for input validity
