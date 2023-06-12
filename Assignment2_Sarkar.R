@@ -8,11 +8,16 @@ if ((is.numeric(as.numeric(userinput))) &
    (nchar(userinput) == 3) &  
    (as.numeric(userinput) >= 0)) { 
      
-   print("Valid input!")
+  # Using strsplit to split userinput into vector of individual digits 
+  splitdigits <- as.numeric(strsplit(userinput, "")[[1]])
+  # Finding the sum of cubes of the individual digits in userinput
+  cubesum <- sum(splitdigits^3)
+  
 
+   
      
 
 } else {
-  print("Invalid entry! Terminating...")
+  print("Invalid entry! Entry must be a positive three-digit number. Terminating...")
   quit()
 } # Outer if-else checking for input validity
